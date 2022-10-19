@@ -1,8 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+ color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +16,39 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.strokeText{
+  color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.btn{
+  @apply bg-red-600 px-8 py-3
+}.btnWhite{
+  @apply bg-white text-black px-8 py-3 font-semibold
+}
+.btnTrans{
+  @apply border-2 border-red-600 px-8 py-3
+}
+.figText{
+  @apply text-gray-400 uppercase
+}
+.image{
+  @apply object-cover h-full w-full 
+}
+.card{
+  @apply flex flex-col gap-5 bg-gray-500  p-8 cursor-pointer
+  hover:bg-red-600 transition ease-in-out delay-75 max-w-[18rem]
+}
+.blur{
+  @apply absolute rounded-[50%] -z-10 bg-[#ff660075] max-h-[30rem] max-w-[30rem] h-[70%] w-[70%] ;
+  filter: blur(150px);
+}
+.resFlex{
+  @apply flex flex-col md:flex-row
+}
+.resPad{
+
 }
